@@ -1,0 +1,36 @@
+ACME Solutions Inc.
+123 Innovation Way, Tech Park, CA 94016
+info@acmesolutions.com | (555) 019-2834
+
+TAX INVOICE
+
+Invoice Number: INV-2024-0042
+Invoice Date: 2024-03-15
+Due Date: 2024-04-14
+Payment Terms: Net 30
+Purchase Order Number: PO-89211
+
+BILL TO:
+Global Logistics Enterprises
+742 Industrial Parkway
+Chicago, IL 60607
+Contact: John Doe (finance@globallogistics.com)
+
+---------------------------------------------------------------------------------------
+Description                       Qty      Unit Price (USD)         Line Total (USD)
+---------------------------------------------------------------------------------------
+Enterprise Cloud Hosting            2                250.00                   500.00
+Database Optimization Service       1                750.00                   750.00
+API Security Audit Retainer         1                450.00                   450.00
+---------------------------------------------------------------------------------------
+
+Subtotal: $1,700.00
+Tax (10%): $170.00
+Discount: $0.00
+Total Amount Due: $1,870.00
+
+Payment Details:
+Wire Transfer to ACME Solutions Inc
+Bank: First Tech Bank
+Account: 987654321 | Routing: 121000358
+Thank you for your business!

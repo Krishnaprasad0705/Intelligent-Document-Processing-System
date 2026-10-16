@@ -1,0 +1,13 @@
+# Core Document Processing Dependencies
+pymupdf>=1.24.0
+pillow>=10.2.0
+pytesseract>=0.3.10
+pandas>=2.2.0
+openpyxl>=3.1.2
+python-dotenv>=1.0.0
+
+# User Interface
+streamlit>=1.35.0
+
+# Testing and Quality
+pytest>=8.0.0

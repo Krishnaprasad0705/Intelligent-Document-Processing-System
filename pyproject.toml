@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "document-ai"
+version = "1.0.0"
+description = "Production-grade Intelligent Document Processing (IDP) System from Scratch"
+authors = [
+    {name = "IDP Engineer"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pymupdf>=1.24.0",
+    "pillow>=10.2.0",
+    "pytesseract>=0.3.10",
+    "pandas>=2.2.0",
+    "openpyxl>=3.1.2",
+    "streamlit>=1.35.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --strict-markers"
+filterwarnings = [
+    "ignore::DeprecationWarning"
+]

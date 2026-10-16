@@ -1,0 +1,35 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "INV-2024-0042",
+  "invoice_date": "2024-03-15",
+  "due_date": "2024-04-14",
+  "vendor_name": "ACME Solutions Inc.",
+  "customer_name": "Global Logistics Enterprises",
+  "currency": "USD",
+  "subtotal": 1700.0,
+  "tax_amount": 170.0,
+  "discount": 0.0,
+  "total_amount": 1870.0,
+  "purchase_order_number": "PO-89211",
+  "payment_terms": "Net 30",
+  "line_items": [
+    {
+      "description": "Enterprise Cloud Hosting",
+      "quantity": 2.0,
+      "unit_price": 250.0,
+      "line_total": 500.0
+    },
+    {
+      "description": "Database Optimization Service",
+      "quantity": 1.0,
+      "unit_price": 750.0,
+      "line_total": 750.0
+    },
+    {
+      "description": "API Security Audit Retainer",
+      "quantity": 1.0,
+      "unit_price": 450.0,
+      "line_total": 450.0
+    }
+  ]
+}
