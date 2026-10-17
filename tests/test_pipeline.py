@@ -81,3 +81,39 @@ def test_pipeline_human_review_override(sample_dir: Path):
     data = result.to_dict()
     assert data["user_reviewed"] is True
     assert data["user_overrides"]["invoice_number"] == "INV-2024-CORRECTED"
+
+
+def test_pipeline_image_ocr_zylker(sample_dir: Path):
+    zylker_img = sample_dir / "zylker_invoice.png"
+    if not zylker_img.exists():
+        pytest.skip("Zylker sample image not found")
+
+    pipeline = get_pipeline()
+    result, images = pipeline.process_file(zylker_img, zylker_img.name)
+
+    assert result.status == ProcessingStatus.SUCCESS
+    assert result.classification.predicted_type == DocumentType.INVOICE
+    assert result.invoice_data is not None
+    assert result.invoice_data.invoice_number == "INV-000001"
+    assert result.invoice_data.invoice_date == "2024-08-05"
+    assert result.invoice_data.vendor_name == "Zylker Electronics Hub"
+    assert result.invoice_data.customer_name == "Ms. Mary D. Dunton"
+    assert result.invoice_data.subtotal == 2227.0
+    assert result.invoice_data.total_amount == 2338.35
+    assert len(result.line_items) >= 2
+
+
+def test_pipeline_image_ocr_graphic(sample_dir: Path):
+    graphic_img = sample_dir / "graphic_design_invoice.png"
+    if not graphic_img.exists():
+        pytest.skip("Graphic design sample image not found")
+
+    pipeline = get_pipeline()
+    result, images = pipeline.process_file(graphic_img, graphic_img.name)
+
+    assert result.classification.predicted_type == DocumentType.INVOICE
+    assert result.invoice_data is not None
+    assert result.invoice_data.invoice_date == "2025-06-01"
+    assert result.invoice_data.due_date == "2025-06-14"
+    assert result.invoice_data.total_amount == 1650.0
+

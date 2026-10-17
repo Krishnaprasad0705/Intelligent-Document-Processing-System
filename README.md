@@ -218,6 +218,32 @@ python evaluate.py
 
 ---
 
+## 🚀 Deployment Guide
+
+### Option 1: Streamlit Community Cloud (1-Click Free Public URL)
+1. Push this repository to your GitHub account (`git push origin master`).
+2. Log in to [share.streamlit.io](https://share.streamlit.io/).
+3. Click **"New App"** and select your repository:
+   - **Repository:** `your-username/idps`
+   - **Branch:** `master`
+   - **Main file path:** `app.py`
+4. Click **"Deploy!"**
+   - The included `packages.txt` will automatically install `tesseract-ocr` and English language packs in the cloud container.
+
+### Option 2: Docker Container Deployment
+Run the containerized application with one command:
+```bash
+docker compose up --build
+```
+Or with standard Docker:
+```bash
+docker build -t document-ai-studio .
+docker run -p 8501:8501 document-ai-studio
+```
+Open **http://localhost:8501** in your browser.
+
+---
+
 ## 🔒 Security & Privacy Considerations
 
 1. **No External API Leaks:** All extraction, classification, and validation executes locally without cloud API calls or telemetry.
@@ -289,4 +315,4 @@ python evaluate.py
 - Designed an explainable document classification engine and label-aware entity extractor with full field-level evidence traceability linking values to source page references.
 - Implemented an accounting integrity validation engine enforcing mathematical consistency ($\text{Subtotal} + \text{Tax} - \text{Discount} = \text{Total}$) and date sequencing, surfacing prioritized review alerts.
 - Built an interactive Streamlit human-in-the-loop review studio with batch processing, CSV formula injection sanitization, and multi-format exports (JSON, CSV, multi-sheet Excel).
-- Developed a comprehensive test suite of 35 unit and integration tests with 100% pass rate.
+- Developed a comprehensive test suite of 37 unit and integration tests with 100% pass rate.
