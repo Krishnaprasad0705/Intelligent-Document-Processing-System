@@ -221,14 +221,14 @@ python evaluate.py
 ## 🚀 Deployment Guide
 
 ### Option 1: Streamlit Community Cloud (1-Click Free Public URL)
-1. Push this repository to your GitHub account (`git push origin master`).
+1. Fork or push changes to [Krishnaprasad0705/Intelligent-Document-Processing-System](https://github.com/Krishnaprasad0705/Intelligent-Document-Processing-System).
 2. Log in to [share.streamlit.io](https://share.streamlit.io/).
-3. Click **"New App"** and select your repository:
-   - **Repository:** `your-username/idps`
-   - **Branch:** `master`
+3. Click **"New App"** and select:
+   - **Repository:** `Krishnaprasad0705/Intelligent-Document-Processing-System`
+   - **Branch:** `main`
    - **Main file path:** `app.py`
 4. Click **"Deploy!"**
-   - The included `packages.txt` will automatically install `tesseract-ocr` and English language packs in the cloud container.
+   - The included `packages.txt` automatically provisions `tesseract-ocr` and language packs in the Linux cloud runner.
 
 ### Option 2: Docker Container Deployment
 Run the containerized application with one command:
